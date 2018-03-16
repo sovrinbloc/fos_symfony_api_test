@@ -60,8 +60,8 @@
     </role>
     <schema id="14" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2018-03-16.15:18:34.735</IntrospectionTimestamp>
-      <IntrospectionStateNumber>1654</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-03-16.16:23:59.069</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1675</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -82,54 +82,55 @@
     </schema>
     <sequence id="20" parent="14" name="oauth2_access_tokens_id_seq">
       <ObjectId>49156</ObjectId>
-      <StateNumber>1626</StateNumber>
+      <StateNumber>1675</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
     <sequence id="21" parent="14" name="oauth2_auth_codes_id_seq">
       <ObjectId>49158</ObjectId>
-      <StateNumber>1627</StateNumber>
+      <StateNumber>1674</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <sequence id="22" parent="14" name="oauth2_clients_id_seq">
-      <ObjectId>49160</ObjectId>
-      <StateNumber>1628</StateNumber>
-      <SequenceIdentity>1</SequenceIdentity>
-      <CacheSize>1</CacheSize>
-      <DataType>bigint</DataType>
-    </sequence>
-    <sequence id="23" parent="14" name="oauth2_refresh_tokens_id_seq">
+    <sequence id="22" parent="14" name="oauth2_refresh_tokens_id_seq">
       <ObjectId>49152</ObjectId>
-      <StateNumber>1624</StateNumber>
+      <StateNumber>1673</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <sequence id="24" parent="14" name="users_id_seq">
+    <sequence id="23" parent="14" name="users_id_seq">
       <ObjectId>49154</ObjectId>
       <StateNumber>1625</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
+    <sequence id="24" parent="14" name="oauth2_clients_id_seq">
+      <ObjectId>49252</ObjectId>
+      <StateNumber>1672</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
     <table id="25" parent="14" name="oauth2_access_tokens">
       <ObjectId>49189</ObjectId>
-      <StateNumber>1652</StateNumber>
+      <StateNumber>1669</StateNumber>
     </table>
     <table id="26" parent="14" name="oauth2_auth_codes">
       <ObjectId>49201</ObjectId>
-      <StateNumber>1654</StateNumber>
+      <StateNumber>1669</StateNumber>
     </table>
     <table id="27" parent="14" name="oauth2_clients">
       <ObjectId>49213</ObjectId>
-      <StateNumber>1653</StateNumber>
+      <StateNumber>1669</StateNumber>
     </table>
     <table id="28" parent="14" name="oauth2_refresh_tokens">
       <ObjectId>49162</ObjectId>
-      <StateNumber>1650</StateNumber>
+      <StateNumber>1669</StateNumber>
     </table>
     <table id="29" parent="14" name="users">
       <ObjectId>49174</ObjectId>
@@ -310,8 +311,10 @@
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1646</StateNumber>
+      <StateNumber>1661</StateNumber>
+      <DefaultExpression>nextval(&apos;oauth2_clients_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
+      <SequenceName>oauth2_clients_id_seq</SequenceName>
     </column>
     <column id="58" parent="27" name="random_id">
       <Position>2</Position>
