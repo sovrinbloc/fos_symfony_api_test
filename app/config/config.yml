@@ -74,8 +74,8 @@ fos_user:
                                                         # our particular context, but still required by "FOSUserBundle"
     user_class: Acme\ApiBundle\Entity\User
     from_email:
-            address: "josephalai@gmail.com"
-            sender_name: "Joseph Alai"
+        address: "josephalai@gmail.com"
+        sender_name: "Joseph Alai"
 
 fos_oauth_server:
     db_driver:           orm
@@ -84,9 +84,9 @@ fos_oauth_server:
     refresh_token_class: Acme\ApiBundle\Entity\RefreshToken
     auth_code_class:     Acme\ApiBundle\Entity\AuthCode
     service:
-        user_provider: fos_user.user_manager             # This property will be used when valid credentials are given to load the user upon access token creation
-
-
+        user_provider: fos_user.user_provider.username
+#    service:
+#            user_provider: fos_user.user_manager             # This property will be used when valid credentials are given to load the user upon access token creation
 
 
 # Swiftmailer Configuration
