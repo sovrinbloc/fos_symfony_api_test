@@ -1,3 +1,6 @@
 api_homepage:
-    path:     /
+    path:     /api
     defaults: { _controller: ApiBundle:Default:index }
+acme_api_demos:
+    type: rest
+    resource: Acme\ApiBundle\Controller\DemoController

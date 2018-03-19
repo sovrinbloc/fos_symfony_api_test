@@ -5,7 +5,6 @@ api:
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
-
 # app/config/routing.yml
 NelmioApiDocBundle:
     resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
@@ -13,6 +12,4 @@ NelmioApiDocBundle:
 
 fos_oauth_server_token:
     resource: "@FOSOAuthServerBundle/Resources/config/routing/token.xml"
-acme_api_demos:
-    type: rest
-    resource: Acme\ApiBundle\Controller\DemoController
+
